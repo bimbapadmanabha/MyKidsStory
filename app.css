@@ -1,0 +1,28 @@
+body{
+background-color:#eee;
+padding: 20px 20px 20px 20px;
+
+}
+
+.header{
+    border: 1px solid black;
+    border-radius: 5px;
+    max-width: 320px;
+    padding: 20px;
+    background-color:lightblue;
+}
+
+
+.details{
+    padding-top: 50px;
+    
+}
+
+.encompass{
+   border: 1px solid black;
+    border-radius: 5px;
+    max-width: 320px;
+     padding: 20px;
+    background-color:lightblue;
+    
+}

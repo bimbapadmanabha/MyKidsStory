@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Code Assignment Application</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, height=device-height, width=device-width, initial-scale=1.0, user-scalable=no, user-scalable=0" />
+    <link rel="stylesheet" href="./app.css" />
+
+
+
+</head>
+
+<body ng-app="codeAssignment" ng-controller="codeAssignmentController as mainCtrl" ng-cloak='ng-cloak'>
+    <div class="maincontainer">
+        <header> Palindrome Reader -> Please click on reset if the same file is used for testing</header>
+        <div class="header">
+            <!-- <input type="file" id="fileinput" />-->
+            <custom-file-reader type="file" custom-id="fileinput" output="mainCtrl.resultArray"></custom-file-reader>
+        </div>
+        <div class="details">
+            <header> Palindrome Reader Output</header>
+            <div class="encompass">
+                <div ng-repeat="palindrome in mainCtrl.resultArray" class="results">
+                    <span> {{palindrome.name}} > {{palindrome.count}} </span>
+                </div>
+                <span ng-if="mainCtrl.resultArray.length<= 0">No palindromes</span>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+    <script type="text/javascript" src="/scripts/directives/fileReaderDirective.js"></script>
+
+</body>
+
+</html>
